@@ -1,0 +1,91 @@
+====================================
+9-11 the new boston 
+==================================
+Rushu@DESKTOP-CQ822UO MINGW64 ~
+$ pwd
+/c/Users/Rushu
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~
+$ cd desktop
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~/desktop
+$ pwd
+/c/Users/Rushu/desktop
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~/desktop
+$ cd Tuna
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~/desktop/Tuna (master)
+$ git rm bla.txt
+rm 'bla.txt'
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~/desktop/Tuna (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    bla.txt
+
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~/desktop/Tuna (master)
+$ git commit -m "this is the point of time where we deleted the  third. #10"
+[master 842d0c3] this is the point of time where we deleted the  third. #10
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 bla.txt
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~/desktop/Tuna (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    third.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        home.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~/desktop/Tuna (master)
+$ git rm third.txt
+rm 'third.txt'
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~/desktop/Tuna (master)
+$ git add home.txt
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~/desktop/Tuna (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        renamed:    third.txt -> home.txt
+
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~/desktop/Tuna (master)
+$ git commit -m "renamed frist.txt to home.txt"
+[master bcfbac3] renamed frist.txt to home.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename third.txt => home.txt (100%)
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~/desktop/Tuna (master)
+$ git mv second.txt index.txt
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~/desktop/Tuna (master)
+$ git mv index.txt  web/index.txt
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~/desktop/Tuna (master)
+$ git commit -m "put in the web folder #11"
+[master 4108e78] put in the web folder #11
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename second.txt => web/index.txt (100%)
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~/desktop/Tuna (master)
+$ git diff
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~/desktop/Tuna (master)
+$

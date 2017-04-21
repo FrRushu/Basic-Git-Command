@@ -1,0 +1,558 @@
+==========================================================
+1-8 the new boston 
+==========================================================
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~
+$ git help commit
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~
+$ clear
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~
+$ pwd
+/c/Users/Rushu
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~
+$  cd ~
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~
+$ pwd
+/c/Users/Rushu
+
+Rushu@DESKTOP-CQ822UO MINGW64 ~
+$ cd ..
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users
+$ pwd
+/c/Users
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users
+$ ls
+'All Users'@   Default/  'Default User'@   desktop.ini   Public/   Rushu/
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users
+$ cd rushu
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu
+$ pwd
+/c/Users/rushu
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu
+$ ls
+ AppData/             ntuser.dat.LOG1
+'Application Data'@   ntuser.dat.LOG2
+ Contacts/            NTUSER.DAT{bf54a94f-2704-11e5-80db-e41d2d743300}.TM.blf
+ Cookies@             NTUSER.DAT{bf54a94f-2704-11e5-80db-e41d2d743300}.TMContainer00000000000000000001.regtrans-ms
+ Desktop/             NTUSER.DAT{bf54a94f-2704-11e5-80db-e41d2d743300}.TMContainer00000000000000000002.regtrans-ms
+ Documents/           ntuser.ini
+ Downloads/           OneDrive/
+ Favorites/           Pictures/
+ FC                   PrintHood@
+ Intel/               Recent@
+ Links/              'Saved Games'/
+'Local Settings'@     Searches/
+ Music/               SendTo@
+'My Documents'@      'Start Menu'@
+ NetHood@             Templates@
+ NTUSER.DAT           Videos/
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu
+$ cd desktop
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop
+$ pwd
+/c/Users/rushu/desktop
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop
+$ cd Tuna
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna
+$ cd ..
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop
+$ cd tuna
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/tuna
+$ ls
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/tuna
+$ cd ..
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop
+$ cd Tuna
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna
+$ git init
+Initialized empty Git repository in C:/Users/Rushu/Desktop/Tuna/.git/
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ ls
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ ls -la
+total 8
+drwxr-xr-x 1 Rushu 197121 0 Apr 20 12:52 ./
+drwxr-xr-x 1 Rushu 197121 0 Apr 20 12:41 ../
+drwxr-xr-x 1 Rushu 197121 0 Apr 20 12:52 .git/
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git add .
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git commit -m
+error: switch `m' requires a value
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <default>   how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git commit -m "This is our first commit #01 "
+[master (root-commit) e0f1473] This is our first commit #01
+ 2 files changed, 2 insertions(+)
+ create mode 100644 bla.txt
+ create mode 100644 frist.txt
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ pwd
+/c/Users/rushu/desktop/Tuna
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git log
+commit e0f14737a2fad17f28136e3cc54dcdfa5988c039
+Author: FrRushu <frushu@gmail.com>
+Date:   Thu Apr 20 13:07:39 2017 -0700
+
+    This is our first commit #01
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git log --author="FrRushu"
+commit e0f14737a2fad17f28136e3cc54dcdfa5988c039
+Author: FrRushu <frushu@gmail.com>
+Date:   Thu Apr 20 13:07:39 2017 -0700
+
+    This is our first commit #01
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git log --author="Rushu"
+commit e0f14737a2fad17f28136e3cc54dcdfa5988c039
+Author: FrRushu <frushu@gmail.com>
+Date:   Thu Apr 20 13:07:39 2017 -0700
+
+    This is our first commit #01
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git log --author="Bucky"
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   frist.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        second .txt
+        third.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git add frist.txt
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git add second.txt
+fatal: pathspec 'second.txt' did not match any files
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git add second.txt
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   frist.txt
+        new file:   second.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        third.txt
+
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git commit -m "adding the second file to the repository #02"
+[master 080dc70] adding the second file to the repository #02
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 second.txt
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git log
+commit 080dc70b61941c66df4d1fe3a2fe010c567e9122
+Author: FrRushu <frushu@gmail.com>
+Date:   Thu Apr 20 13:39:09 2017 -0700
+
+    adding the second file to the repository #02
+
+commit e0f14737a2fad17f28136e3cc54dcdfa5988c039
+Author: FrRushu <frushu@gmail.com>
+Date:   Thu Apr 20 13:07:39 2017 -0700
+
+    This is our first commit #01
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        third.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git add third.txt
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   third.txt
+
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git commit -m "This is our third commit #03"
+[master e2f29b4] This is our third commit #03
+ 1 file changed, 1 insertion(+)
+ create mode 100644 third.txt
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git log
+commit e2f29b4b5b660fb8e208ae6c3e2a6e7d42ccd326
+Author: FrRushu <frushu@gmail.com>
+Date:   Thu Apr 20 13:43:35 2017 -0700
+
+    This is our third commit #03
+
+commit 080dc70b61941c66df4d1fe3a2fe010c567e9122
+Author: FrRushu <frushu@gmail.com>
+Date:   Thu Apr 20 13:39:09 2017 -0700
+
+    adding the second file to the repository #02
+
+commit e0f14737a2fad17f28136e3cc54dcdfa5988c039
+Author: FrRushu <frushu@gmail.com>
+Date:   Thu Apr 20 13:07:39 2017 -0700
+
+    This is our first commit #01
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   frist.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git add frist.txt
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   frist.txt
+
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git commit -m "modified the frist file commint no: #04"
+[master 3644c2d] modified the frist file commint no: #04
+ 1 file changed, 1 insertion(+)
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   second.txt
+        modified:   third.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git add .
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   second.txt
+        modified:   third.txt
+
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git log
+commit 3644c2d5ee86203b602dc519ef0cb9601b4be415
+Author: FrRushu <frushu@gmail.com>
+Date:   Thu Apr 20 13:49:02 2017 -0700
+
+    modified the frist file commint no: #04
+
+commit e2f29b4b5b660fb8e208ae6c3e2a6e7d42ccd326
+Author: FrRushu <frushu@gmail.com>
+Date:   Thu Apr 20 13:43:35 2017 -0700
+
+    This is our third commit #03
+
+commit 080dc70b61941c66df4d1fe3a2fe010c567e9122
+Author: FrRushu <frushu@gmail.com>
+Date:   Thu Apr 20 13:39:09 2017 -0700
+
+    adding the second file to the repository #02
+
+commit e0f14737a2fad17f28136e3cc54dcdfa5988c039
+Author: FrRushu <frushu@gmail.com>
+Date:   Thu Apr 20 13:07:39 2017 -0700
+
+    This is our first commit #01
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git commit -m "This is how you can edit multiple file  commit no "
+[master 89448c8] This is how you can edit multiple file  commit no
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   frist.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git diff
+diff --git a/frist.txt b/frist.txt
+index b57bfdc..c91abe8 100644
+--- a/frist.txt
++++ b/frist.txt
+@@ -1,2 +1 @@
+-hello  this is rushu :)
+-this is the first text file that we made.
+\ No newline at end of file
++Rushu is the best dude ever !^E
+\ No newline at end of file
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git add frist.txt
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git commit -m "we are commiting our changes in frist file commit no #06 "
+[master 7b0e4a4] we are commiting our changes in frist file commit no #06
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git diff
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git log
+commit 7b0e4a4c4ca281751a65d33a5adf95a7d4768989
+Author: FrRushu <frushu@gmail.com>
+Date:   Thu Apr 20 14:06:11 2017 -0700
+
+    we are commiting our changes in frist file commit no #06
+
+commit 89448c8fbf8e55b96280ded424e4cd8c1adfac0e
+Author: FrRushu <frushu@gmail.com>
+Date:   Thu Apr 20 13:56:44 2017 -0700
+
+    This is how you can edit multiple file  commit no
+
+commit 3644c2d5ee86203b602dc519ef0cb9601b4be415
+Author: FrRushu <frushu@gmail.com>
+Date:   Thu Apr 20 13:49:02 2017 -0700
+
+    modified the frist file commint no: #04
+
+commit e2f29b4b5b660fb8e208ae6c3e2a6e7d42ccd326
+Author: FrRushu <frushu@gmail.com>
+Date:   Thu Apr 20 13:43:35 2017 -0700
+
+    This is our third commit #03
+
+commit 080dc70b61941c66df4d1fe3a2fe010c567e9122
+Author: FrRushu <frushu@gmail.com>
+Date:   Thu Apr 20 13:39:09 2017 -0700
+
+    adding the second file to the repository #02
+
+commit e0f14737a2fad17f28136e3cc54dcdfa5988c039
+Author: FrRushu <frushu@gmail.com>
+Date:   Thu Apr 20 13:07:39 2017 -0700
+
+    This is our first commit #01
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   second.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git add second.txt
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git diff
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git commit -m "change in the second file commit no #07"
+[master bc275d9] change in the second file commit no #07
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git diff
+diff --git a/third.txt b/third.txt
+index 8c39527..9d954c5 100644
+--- a/third.txt
++++ b/third.txt
+@@ -1 +1 @@
+-changes to third
+\ No newline at end of file
++These are the changes in the third file .
+\ No newline at end of file
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git add third.txt
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ git commit -m "change in the third file  #08"
+[master 0f9dbec] change in the third file  #08
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$ ^C
+
+Rushu@DESKTOP-CQ822UO MINGW64 /c/Users/rushu/desktop/Tuna (master)
+$
